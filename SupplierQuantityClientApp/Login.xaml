@@ -1,0 +1,86 @@
+﻿<Window x:Class="SupplierQuantityClientApp.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SupplierQuantityClientApp"
+        mc:Ignorable="d"
+        Title="Login" Height="350" Width="525">
+    <Grid Margin="10">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <TextBlock 
+            Text="Welcome to Supplier quantity client app:" 
+            FontSize="25"/>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock 
+                Grid.Row="0"
+                Grid.Column="0"
+                Height="23" 
+                Text="Username" 
+                Width="67"
+                HorizontalAlignment="Left"/>
+
+            <TextBox 
+                Grid.Row="0"
+                Grid.Column="1"
+                Height="23" 
+                Name="textBoxUsername" 
+                Width="247"
+                HorizontalAlignment="Left"/>
+
+            <TextBlock 
+                Grid.Row="1"
+                Grid.Column="0"
+                Height="23" 
+                Text="Password" 
+                Width="77"
+                HorizontalAlignment="Left"/>
+
+            <PasswordBox 
+                Grid.Row="1"
+                Grid.Column="1"
+                Height="23" 
+                Name="passwordBox1" 
+                Width="247"
+                HorizontalAlignment="Left"/>
+
+            <Button 
+                Grid.Row="2"
+                Grid.Column="1"
+                Content="Login" 
+                Height="23" 
+                Name="buttonLogin" 
+                Width="104" 
+                Click="login_Click"
+                HorizontalAlignment="Left"/>
+
+            <TextBlock 
+                Grid.Row="3"
+                Grid.Column="1" 
+                x:Name ="errormessage" 
+                Width="418" 
+                OpacityMask="Crimson" 
+                Foreground="#FFE5572C"
+                HorizontalAlignment="Left" Margin="0,10,0,24"/>
+
+        </Grid>
+    </Grid>
+</Window>
